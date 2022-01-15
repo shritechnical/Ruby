@@ -1,0 +1,31 @@
+
+
+<div class="container">
+<h5>Hello this is About Page</h5>
+<h1>Listing Tutorials</h1>
+
+<table class="table table-sm">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Content</th>
+       <th colspan="3"></th>
+
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @books.each do |book| %>
+      <tr>
+        <td><%= book.title %></td>
+        <td><%= book.body %></td>
+        <td><%= link_to 'Show', about_path(book) %></td>
+    
+         </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+<br>
+
+
